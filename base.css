@@ -97,6 +97,11 @@ table {
   width: 100%;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 a,
 button,
 [role='button'],

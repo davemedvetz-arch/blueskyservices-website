@@ -1890,3 +1890,37 @@ h4 {
     height: 38px;
   }
 }
+
+/* ---------- V3: larger full logo with SERVICES wordmark ---------- */
+.logo-link {
+  height: 68px;
+}
+.site-header.is-scrolled .logo-link,
+.site-header.header-solid .logo-link {
+  height: 56px;
+}
+@media (max-width: 1023px) {
+  .logo-link {
+    height: 54px;
+  }
+  .site-header.is-scrolled .logo-link,
+  .site-header.header-solid .logo-link {
+    height: 42px;
+  }
+}
+.mobile-menu-logo {
+  height: 46px;
+  width: auto;
+}
+.mobile-menu-logo.logo-mark-dark {
+  display: none;
+}
+[data-theme='dark'] .mobile-menu-logo.logo-mark-light {
+  display: none;
+}
+[data-theme='dark'] .mobile-menu-logo.logo-mark-dark {
+  display: block;
+}
+.footer-brand img {
+  height: 54px;
+}

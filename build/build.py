@@ -291,6 +291,8 @@ def build():
             ("{{CANONICAL}}", canonical),
             ("{{OG_IMAGE}}", OG_IMAGE),
             ("{{SCHEMA}}", schema_block),
+            ("{{ROBOTS}}", "noindex, nofollow" if cfg.get("noindex")
+             else "index, follow, max-image-preview:large"),
             ("{{NAV_LINKS}}", desktop_nav),
             ("{{MOBILE_NAV_LINKS}}", mobile_nav),
             ("{{HEADER_SOLID}}", " header-solid" if page == "contact.html" else ""),
@@ -305,6 +307,8 @@ def build():
     # sitemap
     urls = []
     for page, cfg in META["pages"].items():
+        if cfg.get("noindex"):
+            continue
         loc = BASE + "/" + ("" if page == "index.html" else page)
         urls.append(
             "  <url>\n    <loc>%s</loc>\n    <changefreq>monthly</changefreq>\n"

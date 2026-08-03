@@ -117,6 +117,19 @@
           "contact.html"
         ]
       ]
+    },
+    "review.html": {
+      "title": "Leave Blue Sky Services a Review",
+      "description": "Tell us how we did. Leave Blue Sky Services a review, or reach the owner directly at 919-743-0030.",
+      "keywords": "",
+      "priority": "0.1",
+      "noindex": true,
+      "breadcrumb": [
+        [
+          "Leave a Review",
+          "review.html"
+        ]
+      ]
     }
   }
 }

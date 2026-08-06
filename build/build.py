@@ -166,8 +166,8 @@ RESIDENTIAL_FAQ = [
 
 COMMERCIAL_FAQ = [
     ("Can you keep my business open during construction?",
-     "In most cases, yes. We regularly phase tenant upfits and remodels so occupied retail, office and "
-     "medical spaces keep operating. We schedule loud or disruptive work around your hours and coordinate "
+     "In most cases, yes. We regularly phase tenant upfits and remodels so occupied retail and office "
+     "spaces keep operating. We schedule loud or disruptive work around your hours and coordinate "
      "with building management on access, deliveries and shared spaces."),
     ("How fast can you deliver a tenant upfit?",
      "Once permits are in hand, our fast-track delivery approach compresses the schedule by overlapping "
@@ -192,8 +192,8 @@ PAGE_SCHEMA = {
     "commercial.html": [
         service_schema(
             "Commercial Construction and Tenant Upfits in Raleigh, NC",
-            "Commercial general contracting, tenant upfits, office build-outs, retail, restaurant and "
-            "medical construction throughout the Triangle region of North Carolina.",
+            "Commercial general contracting, tenant upfits, office build-outs, retail and restaurant "
+            "construction throughout the Triangle region of North Carolina.",
             "Commercial General Contracting", "commercial.html"),
         faq_schema(COMMERCIAL_FAQ),
     ],

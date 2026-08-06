@@ -6,10 +6,8 @@
     "phone_href": "9197430030",
     "fax": "919-743-0031",
     "email": "info@blueskyservices.com",
-    "street": "2810 Yonkers Rd, Suite 2A",
     "city": "Raleigh",
     "state": "NC",
-    "zip": "27604",
     "founded": "1996"
   },
   "nav": [
@@ -20,14 +18,6 @@
     {
       "label": "Commercial",
       "file": "commercial.html"
-    },
-    {
-      "label": "Development",
-      "file": "development.html"
-    },
-    {
-      "label": "Investing",
-      "file": "investors.html"
     },
     {
       "label": "About",
@@ -41,14 +31,14 @@
   "pages": {
     "index.html": {
       "title": "Raleigh General Contractor Since 1996 | Blue Sky Services",
-      "description": "Family-run Raleigh general contractor since 1996. Home remodeling for Triangle homeowners, commercial build-outs for businesses, plus land development and real estate investing. Free estimates.",
+      "description": "Family-run Raleigh general contractor since 1996. Home remodeling for Triangle homeowners and light commercial build-outs and tenant upfits for local businesses. Free estimates.",
       "keywords": "Raleigh general contractor, home remodeling Raleigh NC, commercial contractor Raleigh, Triangle remodeling contractor, licensed general contractor Raleigh",
       "priority": "1.0",
       "breadcrumb": []
     },
     "residential.html": {
       "title": "Home Remodeling Contractor in Raleigh, NC | Blue Sky Services",
-      "description": "Kitchen remodels, bathroom renovations, home additions, sunrooms and decks across Raleigh, Cary, Apex and Wake Forest. Licensed, insured, certified green remodeler. Free in-home estimate.",
+      "description": "Kitchen remodels, bathroom renovations, home additions, sunrooms and decks across Raleigh, Cary, Apex and Wake Forest. Licensed general contractor, fully insured. Free in-home estimate.",
       "keywords": "home remodeling Raleigh NC, kitchen remodeling contractor Raleigh, bathroom remodel Raleigh, home addition contractor Raleigh, deck builder Raleigh, residential remodeling contractor near me",
       "priority": "0.9",
       "breadcrumb": [
@@ -60,37 +50,13 @@
     },
     "commercial.html": {
       "title": "Commercial General Contractor Raleigh NC | Tenant Upfits",
-      "description": "Commercial general contractor in Raleigh, NC handling tenant upfits, office build-outs, retail, medical and restaurant construction. Trusted by 50+ national brands. Fast-track delivery.",
+      "description": "Commercial general contractor in Raleigh, NC handling tenant upfits, office build-outs, retail and restaurant construction. Licensed general contractor, fully insured. Fast-track delivery.",
       "keywords": "commercial general contractor Raleigh NC, tenant upfit contractor Raleigh, office build out Raleigh, retail construction Raleigh, commercial remodel contractor Triangle NC, restaurant contractor Raleigh",
       "priority": "0.9",
       "breadcrumb": [
         [
           "Commercial Construction",
           "commercial.html"
-        ]
-      ]
-    },
-    "development.html": {
-      "title": "Land Development Company Raleigh NC | Blue Sky Services",
-      "description": "North Carolina land development and ground-up construction: acquisition, entitlement, multi-family, mixed-use and build-to-suit. $150M+ delivered across the Triangle and eastern NC.",
-      "keywords": "land development company Raleigh NC, real estate developer Raleigh, multi family developer North Carolina, fee development services, build to suit developer Raleigh",
-      "priority": "0.7",
-      "breadcrumb": [
-        [
-          "Development",
-          "development.html"
-        ]
-      ]
-    },
-    "investors.html": {
-      "title": "Real Estate Crowdfunding in Raleigh, NC | Blue Sky Services",
-      "description": "Invest alongside a Raleigh developer. Blue Sky Crowd Funding offers debt and equity positions in Triangle commercial real estate projects under the JOBS Act.",
-      "keywords": "real estate crowdfunding North Carolina, commercial real estate investing Raleigh, passive real estate investment NC, JOBS Act real estate offering",
-      "priority": "0.7",
-      "breadcrumb": [
-        [
-          "Investing",
-          "investors.html"
         ]
       ]
     },
@@ -108,7 +74,7 @@
     },
     "contact.html": {
       "title": "Contact Blue Sky Services | Free Estimate in Raleigh, NC",
-      "description": "Get a free estimate from Blue Sky Services. Call 919-743-0030 or send us your project details \u2014 we respond within one business day. Office at 2810 Yonkers Rd, Raleigh NC.",
+      "description": "Get a free estimate from Blue Sky Services. Call 919-743-0030 or send us your project details \u2014 we respond within one business day. Serving Raleigh, NC and the Triangle.",
       "keywords": "free remodeling estimate Raleigh, contact general contractor Raleigh NC, construction quote Raleigh, Blue Sky Services phone number",
       "priority": "0.8",
       "breadcrumb": [

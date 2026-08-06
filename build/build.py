@@ -41,15 +41,13 @@ def local_business_schema():
         "priceRange": "$$",
         "description": (
             "Blue Sky Services is a family-run Raleigh, NC general contractor founded in 1996, "
-            "providing residential home remodeling, commercial construction and tenant upfits, "
-            "land development, and real estate investment opportunities across the Triangle."
+            "providing residential home remodeling and light commercial construction and tenant "
+            "upfits across the Triangle."
         ),
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": SITE["street"],
             "addressLocality": SITE["city"],
             "addressRegion": SITE["state"],
-            "postalCode": SITE["zip"],
             "addressCountry": "US",
         },
         "geo": {"@type": "GeoCoordinates", "latitude": 35.8073, "longitude": -78.5795},
@@ -84,7 +82,6 @@ def local_business_schema():
                     "Sunroom Construction", "Deck and Porch Building",
                     "Basement and Attic Finishing", "Commercial Tenant Upfits",
                     "Office Build-Outs", "Retail and Restaurant Construction",
-                    "Land Development", "Multi-Family Development",
                 ]
             ],
         },
@@ -154,9 +151,8 @@ RESIDENTIAL_FAQ = [
      "Bigger jobs that move plumbing, change the footprint, or involve custom tile take longer. We give "
      "you a written schedule before we start and tell you right away if anything shifts."),
     ("Are you licensed and insured?",
-     "Yes. Blue Sky Services is a North Carolina licensed general contractor and carries $2 million in "
-     "liability insurance. We are also a Certified Green Remodeler. We are happy to send documentation "
-     "before you sign anything."),
+     "Yes. Blue Sky Services holds an unlimited North Carolina general contractor license and is fully "
+     "insured. We are happy to send documentation before you sign anything."),
     ("Do you offer financing for home remodeling?",
      "We do help homeowners arrange financing for remodeling projects. Tell us your budget target during "
      "the estimate and we will walk you through the options available."),
@@ -174,33 +170,14 @@ COMMERCIAL_FAQ = [
      "medical spaces keep operating. We schedule loud or disruptive work around your hours and coordinate "
      "with building management on access, deliveries and shared spaces."),
     ("How fast can you deliver a tenant upfit?",
-     "Speed is one of the reasons national brands keep hiring us. Once permits are in hand, our fast-track "
-     "delivery approach compresses the schedule by overlapping trades and pre-ordering long-lead items. "
-     "We recently completed a 20,000+ square foot restoration in two weeks."),
+     "Once permits are in hand, our fast-track delivery approach compresses the schedule by overlapping "
+     "trades and pre-ordering long-lead items so you can open on the date you committed to your landlord."),
     ("Do you handle permitting and inspections?",
      "Yes. We manage permits, inspections and code compliance as part of the contract, and we are your "
      "single point of responsibility from drawings through final sign-off."),
     ("What types of commercial projects do you take on?",
-     "Office build-outs and upfits, retail stores, restaurants, medical and dental suites, schools, "
-     "multi-family interiors and common areas, and full commercial restorations after storm or fire damage."),
-    ("Do you work with national or multi-site brands?",
-     "We do. Blue Sky has completed work for more than 50 national commercial clients including Chipotle, "
-     "GAP, FedEx and Old Navy, and we understand brand standards, rollout schedules and corporate reporting."),
-]
-
-INVESTOR_FAQ = [
-    ("How do I invest?",
-     "Start by requesting more information through our contact form. After reviewing offering documents and "
-     "completing a subscription, your investment is reviewed by an SEC-regulated fund administrator. Funds "
-     "are held in escrow until the offering is fully funded, then released to the project."),
-    ("Is there a minimum investment?",
-     "Yes. Each individual offering states its own minimum investment requirement in its offering documents."),
-    ("Can I invest through an LLC or trust?",
-     "Yes. Investing through an LLC, trust or other business entity is allowed, though additional "
-     "documentation is required during onboarding."),
-    ("How is my financial information protected?",
-     "All communication is encrypted via HTTPS/SSL/TLS. Escrow, background checks and document signing are "
-     "handled by outsourced, SEC-compliant partners disclosed in each offering's documents."),
+     "Office build-outs and upfits, retail stores, restaurants and light commercial remodels and "
+     "restorations after storm or fire damage."),
 ]
 
 PAGE_SCHEMA = {
@@ -220,14 +197,6 @@ PAGE_SCHEMA = {
             "Commercial General Contracting", "commercial.html"),
         faq_schema(COMMERCIAL_FAQ),
     ],
-    "development.html": [
-        service_schema(
-            "Land Development and Ground-Up Construction",
-            "Land acquisition, entitlement, principal and fee development for multi-family, mixed-use, "
-            "retail and build-to-suit projects across North Carolina.",
-            "Real Estate Development", "development.html"),
-    ],
-    "investors.html": [faq_schema(INVESTOR_FAQ)],
     "contact.html": [{
         "@type": "ContactPage",
         "url": BASE + "/contact.html",

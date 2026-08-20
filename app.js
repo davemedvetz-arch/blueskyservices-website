@@ -10,7 +10,9 @@
   // Theme toggle
   var toggle = document.querySelector('[data-theme-toggle]');
   var root = document.documentElement;
-  var theme = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+  var savedTheme = null;
+  try { savedTheme = localStorage.getItem('bss-theme'); } catch (err) {}
+  var theme = savedTheme || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
   root.setAttribute('data-theme', theme);
 
   function renderToggleIcon() {
@@ -26,6 +28,7 @@
     toggle.addEventListener('click', function () {
       theme = theme === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', theme);
+      try { localStorage.setItem('bss-theme', theme); } catch (err) {}
       renderToggleIcon();
     });
   }
@@ -93,19 +96,35 @@
   });
 })();
 
-// Contact form (static site — no backend; shows confirmation)
+// Contact form (static site — opens the visitor's email app with the message pre-filled)
 function handleFormSubmit(e) {
   e.preventDefault();
   var form = e.target;
-  var btn = form.querySelector('button[type="submit"]');
-  var originalText = btn.textContent;
-  btn.textContent = 'Message Sent';
-  btn.disabled = true;
-  setTimeout(function () {
-    alert('Thanks for reaching out! Call 919-743-0030 or email info@blueskyservices.com and we will follow up within one business day.');
-    btn.textContent = originalText;
-    btn.disabled = false;
-    form.reset();
-  }, 600);
+  var get = function (name) {
+    var el = form.querySelector('[name="' + name + '"]');
+    return el ? el.value.trim() : '';
+  };
+  var name = (get('fname') + ' ' + get('lname')).trim();
+  var subject = 'Free estimate request — ' + (get('interest') || 'General inquiry');
+  var bodyLines = [
+    'Name: ' + name,
+    'Email: ' + get('email'),
+    'Phone: ' + (get('phone') || 'Not provided'),
+    'Project type: ' + get('interest'),
+    '',
+    'Project details:',
+    get('details'),
+  ];
+  var mailto =
+    'mailto:info@blueskyservices.com?subject=' +
+    encodeURIComponent(subject) +
+    '&body=' +
+    encodeURIComponent(bodyLines.join('\n'));
+  window.location.href = mailto;
+  var note = form.querySelector('.form-note');
+  if (note) {
+    note.innerHTML =
+      'Your email app should open with your request pre-filled — just hit send. If it didn\u2019t open, email <a href="mailto:info@blueskyservices.com">info@blueskyservices.com</a> or call <a href="tel:9197430030">919-743-0030</a>.';
+  }
   return false;
 }

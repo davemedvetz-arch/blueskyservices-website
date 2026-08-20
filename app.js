@@ -10,8 +10,18 @@
   // Theme toggle
   var toggle = document.querySelector('[data-theme-toggle]');
   var root = document.documentElement;
-  var savedTheme = null;
-  try { savedTheme = localStorage.getItem('bss-theme'); } catch (err) {}
+  function readThemeCookie() {
+    try {
+      var m = document.cookie.match(/(?:^|;\s*)bss-theme=(dark|light)/);
+      return m ? m[1] : null;
+    } catch (err) { return null; }
+  }
+  function saveThemeCookie(value) {
+    try {
+      document.cookie = 'bss-theme=' + value + ';path=/;max-age=31536000;SameSite=Lax';
+    } catch (err) {}
+  }
+  var savedTheme = readThemeCookie();
   var theme = savedTheme || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
   root.setAttribute('data-theme', theme);
 
@@ -28,7 +38,7 @@
     toggle.addEventListener('click', function () {
       theme = theme === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', theme);
-      try { localStorage.setItem('bss-theme', theme); } catch (err) {}
+      saveThemeCookie(theme);
       renderToggleIcon();
     });
   }
